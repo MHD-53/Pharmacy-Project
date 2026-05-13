@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Project
 {
-    public partial class Form2 : Form
+    public partial class MainForm : Form
     {
-        public Form2()
+        public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            Show_dataGridView.DataSource = DataStorage.Medicines;
         }
     }
 }

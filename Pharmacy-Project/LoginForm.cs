@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Project
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -22,9 +22,10 @@ namespace Pharmacy_Project
             if(Login.CheckUser(txt_username.Text, txt_password.Text))
             {
                 MessageBox.Show("Login successful!");
-                Form2 main = new Form2();
+                MainForm main = new MainForm();
                 main.Show();
                 this.Hide();
+                main.FormClosed += (s, args) => Application.Exit();
             }
             else
             {

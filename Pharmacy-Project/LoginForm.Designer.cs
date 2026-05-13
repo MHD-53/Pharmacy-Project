@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Project
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -57,7 +57,7 @@
             this.txt_password.Size = new System.Drawing.Size(100, 24);
             this.txt_password.TabIndex = 2;
             // 
-            // Form1
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -65,8 +65,8 @@
             this.Controls.Add(this.txt_password);
             this.Controls.Add(this.txt_username);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "LoginForm";
+            this.Text = "Login page";
             this.ResumeLayout(false);
             this.PerformLayout();
 
