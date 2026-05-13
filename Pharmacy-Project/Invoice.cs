@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pharmacy_Project
 {
-    internal class Invoice
+    public class Invoice
     {
+        // كلاس الفواتير
         public List<Medicine> Medicines { get; set; }
         public List<int> Quantities { get; set; }
         public DateTime Date { get; set; }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Pharmacy_Project
 {
-    internal class Medicine
+    // كلاس الأدوية
+    public class Medicine
     {
         public string Name { get; set; }
         public string ScientificName { get; set; }

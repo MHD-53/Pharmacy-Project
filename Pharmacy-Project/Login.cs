@@ -9,6 +9,7 @@ namespace Pharmacy_Project
 {
     internal class Login
     {
+        // كلاس تسجيل الدخول يحتوي على دالة ثابتة للتحقق من اسم المستخدم وكلمة المرور
         public static bool CheckUser (string username, string password)
         {
             const string Username  = "admin";
