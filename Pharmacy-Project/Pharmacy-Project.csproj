@@ -58,6 +58,7 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Invoice.cs" />
     <Compile Include="Login.cs" />
     <Compile Include="Medicine.cs" />
     <Compile Include="Program.cs" />
