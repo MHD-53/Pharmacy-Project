@@ -35,24 +35,25 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(489, 268);
+            this.button1.Location = new System.Drawing.Point(450, 228);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Go";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txt_username
             // 
-            this.txt_username.Location = new System.Drawing.Point(416, 116);
+            this.txt_username.Location = new System.Drawing.Point(436, 116);
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(100, 24);
             this.txt_username.TabIndex = 1;
+            this.txt_username.TextChanged += new System.EventHandler(this.txt_username_TextChanged);
             // 
             // txt_password
             // 
-            this.txt_password.Location = new System.Drawing.Point(643, 115);
+            this.txt_password.Location = new System.Drawing.Point(436, 169);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(100, 24);
             this.txt_password.TabIndex = 2;

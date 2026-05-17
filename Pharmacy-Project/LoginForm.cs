@@ -32,5 +32,10 @@ namespace Pharmacy_Project
                 MessageBox.Show("Invalid username or password. Please try again.");
             }
         }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

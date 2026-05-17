@@ -15,7 +15,9 @@ namespace Pharmacy_Project
         public static void OriginalMedicines()
         {
            Medicines.Add(new Medicine("Panadol","paracetamol","TST", 10.0, 100, new DateTime(2026,12,3)));
-           Medicines.Add(new Medicine("Panadol", "par", "TST2", 5.0, 600, new DateTime(2024, 10, 3)));
+           Medicines.Add(new Medicine("Panadol", "par", "gg", 5.0, 600, new DateTime(2024, 10, 3)));
+           Medicines.Add(new Medicine("Panadol", "par", "aa", 8.0, 600, new DateTime(2000, 10, 3)));
+            
         }
     }
 }
