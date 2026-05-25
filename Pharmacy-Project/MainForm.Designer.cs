@@ -60,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1116, 450);
+            this.ClientSize = new System.Drawing.Size(1336, 450);
             this.Controls.Add(this.cmbFilter);
             this.Controls.Add(this.Show_dataGridView);
             this.Name = "MainForm";

@@ -15,8 +15,9 @@ namespace Pharmacy_Project
         public double Price { get; set; }
         public int Quantity { get; set; }
         public DateTime ExpiryDate { get; set; }
+        public int Id { get; set; }
 
-        public Medicine(string name, string scientificName, string manufactuere, double price, int quantity, DateTime expiryDate)
+        public Medicine(string name, string scientificName, string manufactuere, double price, int quantity, DateTime expiryDate, int id)
         {
             Name = name;
             ScientificName = scientificName;
@@ -24,6 +25,7 @@ namespace Pharmacy_Project
             Price = price;
             Quantity = quantity;
             ExpiryDate = expiryDate;
+            Id = id;
         }
     }
 }

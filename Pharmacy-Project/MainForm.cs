@@ -55,5 +55,11 @@ namespace Pharmacy_Project
             Show_dataGridView.DataSource = null;
             Show_dataGridView.DataSource = result;
         }
+
+        private void TOedit_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
+

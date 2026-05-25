@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,13 +20,13 @@ namespace Pharmacy_Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Login.CheckUser(txt_username.Text, txt_password.Text))
+            if (Login.CheckUser(txt_username.Text, txt_password.Text))
             {
                 MessageBox.Show("Login successful!");
-                MainForm main = new MainForm();
-                main.Show();
+                HomeForm home = new HomeForm();
                 this.Hide();
-                main.FormClosed += (s, args) => Application.Exit();
+                home.FormClosed += (s, args) => Application.Exit();
+                home.Show();
             }
             else
             {
@@ -37,5 +38,11 @@ namespace Pharmacy_Project
         {
 
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
+
