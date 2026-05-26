@@ -32,7 +32,7 @@ namespace Pharmacy_Project
                     {
                        for (int j = i + 1; j < result.Count; j++)
                         {
-                            if (string.Compare(result[i].Manufactuere, result[j].Manufactuere) > 0)
+                            if (string.Compare(result[i].Manufacturer, result[j].Manufacturer) > 0)
                             {
                                 Medicine temp = result[i];
                                 result[i] = result[j];

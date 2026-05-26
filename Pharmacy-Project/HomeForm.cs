@@ -27,7 +27,7 @@ namespace Pharmacy_Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Management management = new Management();
+            ManagemenM management = new ManagemenM();
             management.ShowDialog();
         }
     }

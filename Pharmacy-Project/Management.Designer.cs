@@ -1,6 +1,6 @@
 ﻿namespace Pharmacy_Project
 {
-    partial class Management
+    partial class ManagemenM
     {
         /// <summary>
         /// Required designer variable.
@@ -30,11 +30,11 @@
         {
             this.gd = new System.Windows.Forms.DataGridView();
             this.add_btn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxN = new System.Windows.Forms.TextBox();
+            this.textBoxP = new System.Windows.Forms.TextBox();
+            this.textBoxM = new System.Windows.Forms.TextBox();
+            this.textBoxS = new System.Windows.Forms.TextBox();
+            this.textBoxQ = new System.Windows.Forms.TextBox();
             this.dt = new System.Windows.Forms.DateTimePicker();
             this.update_btn = new System.Windows.Forms.Button();
             this.remove_btn = new System.Windows.Forms.Button();
@@ -50,6 +50,7 @@
             this.gd.RowTemplate.Height = 26;
             this.gd.Size = new System.Drawing.Size(504, 303);
             this.gd.TabIndex = 0;
+            this.gd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gd_CellClick);
             // 
             // add_btn
             // 
@@ -61,40 +62,40 @@
             this.add_btn.UseVisualStyleBackColor = true;
             this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
             // 
-            // textBox1
+            // textBoxN
             // 
-            this.textBox1.Location = new System.Drawing.Point(675, 87);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 24);
-            this.textBox1.TabIndex = 2;
+            this.textBoxN.Location = new System.Drawing.Point(675, 87);
+            this.textBoxN.Name = "textBoxN";
+            this.textBoxN.Size = new System.Drawing.Size(100, 24);
+            this.textBoxN.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxP
             // 
-            this.textBox2.Location = new System.Drawing.Point(675, 265);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 24);
-            this.textBox2.TabIndex = 3;
+            this.textBoxP.Location = new System.Drawing.Point(675, 265);
+            this.textBoxP.Name = "textBoxP";
+            this.textBoxP.Size = new System.Drawing.Size(100, 24);
+            this.textBoxP.TabIndex = 3;
             // 
-            // textBox3
+            // textBoxM
             // 
-            this.textBox3.Location = new System.Drawing.Point(675, 205);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 24);
-            this.textBox3.TabIndex = 4;
+            this.textBoxM.Location = new System.Drawing.Point(675, 205);
+            this.textBoxM.Name = "textBoxM";
+            this.textBoxM.Size = new System.Drawing.Size(100, 24);
+            this.textBoxM.TabIndex = 4;
             // 
-            // textBox4
+            // textBoxS
             // 
-            this.textBox4.Location = new System.Drawing.Point(675, 143);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 24);
-            this.textBox4.TabIndex = 5;
+            this.textBoxS.Location = new System.Drawing.Point(675, 143);
+            this.textBoxS.Name = "textBoxS";
+            this.textBoxS.Size = new System.Drawing.Size(100, 24);
+            this.textBoxS.TabIndex = 5;
             // 
-            // textBox5
+            // textBoxQ
             // 
-            this.textBox5.Location = new System.Drawing.Point(675, 326);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 24);
-            this.textBox5.TabIndex = 6;
+            this.textBoxQ.Location = new System.Drawing.Point(675, 326);
+            this.textBoxQ.Name = "textBoxQ";
+            this.textBoxQ.Size = new System.Drawing.Size(100, 24);
+            this.textBoxQ.TabIndex = 6;
             // 
             // dt
             // 
@@ -121,8 +122,9 @@
             this.remove_btn.TabIndex = 9;
             this.remove_btn.Text = "remove";
             this.remove_btn.UseVisualStyleBackColor = true;
+            this.remove_btn.Click += new System.EventHandler(this.remove_btn_Click);
             // 
-            // Management
+            // ManagemenM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -130,14 +132,14 @@
             this.Controls.Add(this.remove_btn);
             this.Controls.Add(this.update_btn);
             this.Controls.Add(this.dt);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxQ);
+            this.Controls.Add(this.textBoxS);
+            this.Controls.Add(this.textBoxM);
+            this.Controls.Add(this.textBoxP);
+            this.Controls.Add(this.textBoxN);
             this.Controls.Add(this.add_btn);
             this.Controls.Add(this.gd);
-            this.Name = "Management";
+            this.Name = "ManagemenM";
             this.Text = "Management";
             this.Load += new System.EventHandler(this.Management_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gd)).EndInit();
@@ -150,11 +152,11 @@
 
         private System.Windows.Forms.DataGridView gd;
         private System.Windows.Forms.Button add_btn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxN;
+        private System.Windows.Forms.TextBox textBoxP;
+        private System.Windows.Forms.TextBox textBoxM;
+        private System.Windows.Forms.TextBox textBoxS;
+        private System.Windows.Forms.TextBox textBoxQ;
         private System.Windows.Forms.DateTimePicker dt;
         private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.Button remove_btn;

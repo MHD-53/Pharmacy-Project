@@ -11,17 +11,17 @@ namespace Pharmacy_Project
     {
         public string Name { get; set; }
         public string ScientificName { get; set; }
-        public string Manufactuere { get; set; }
+        public string Manufacturer { get; set; }
         public double Price { get; set; }
         public int Quantity { get; set; }
         public DateTime ExpiryDate { get; set; }
         public int Id { get; set; }
 
-        public Medicine(string name, string scientificName, string manufactuere, double price, int quantity, DateTime expiryDate, int id)
+        public Medicine(string name, string scientificName, string manufacturer, double price, int quantity, DateTime expiryDate, int id)
         {
             Name = name;
             ScientificName = scientificName;
-            Manufactuere = manufactuere;
+            Manufacturer = manufacturer;
             Price = price;
             Quantity = quantity;
             ExpiryDate = expiryDate;
