@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Project
 {
-    public partial class MainForm : Form
+    public partial class POSForm : Form
     {
-        public MainForm()
+        public POSForm()
         {
             InitializeComponent();
        
@@ -191,6 +191,33 @@ namespace Pharmacy_Project
             Cart_dataGridView.Rows.Clear();
 
             Helper.Refresh(Show_dataGridView);
+        }
+
+       
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+       
+
+        private void btnPOS_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMG_Click(object sender, EventArgs e)
+        {
+            Management management = new Management();
+            management.Show();
+            this.Close();
+        }
+
+        private void btnEX_Click(object sender, EventArgs e)
+        {
+            ExpiredMedicinesForm exp = new ExpiredMedicinesForm();
+            exp.Show();
+            this.Close();
         }
     }
     

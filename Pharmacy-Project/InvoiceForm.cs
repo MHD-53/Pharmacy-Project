@@ -64,7 +64,12 @@ namespace Pharmacy_Project
                 lblTotal.Text = $"الإجمالي: {invoice.Total} ل.س";
                 lblDate.Text = $"التاريخ: {invoice.Date}";
             }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
+    }
 
     
     

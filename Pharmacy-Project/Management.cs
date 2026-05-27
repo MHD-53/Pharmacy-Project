@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Project
 {
-    public partial class ManagemenM : Form
+    public partial class Management : Form
     {
         int Idindex = 10;
         int selectedId = -1;
-        public ManagemenM()
+        public Management()
         {
             InitializeComponent();
         }
@@ -87,5 +87,34 @@ namespace Pharmacy_Project
             DataStorage.Medicines.Remove(medToDelet);
             Helper.Refresh(gd);
         }
+
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void btnPOS_Click_1(object sender, EventArgs e)
+        {
+            POSForm pos = new POSForm();
+            pos.Show();
+            this.Close();
+        }
+
+        private void btnMG_Click_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnEX_Click_1(object sender, EventArgs e)
+        {
+            ExpiredMedicinesForm exp = new ExpiredMedicinesForm();
+            exp.Show();
+            this.Close();
+        }
+
+       
+
+        
     }
 }

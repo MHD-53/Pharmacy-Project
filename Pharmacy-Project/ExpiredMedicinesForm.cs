@@ -41,7 +41,37 @@ namespace Pharmacy_Project
                 }
             }
             MessageBox.Show("Expired medicines have been removed.");
+            
+            POSForm pos = new POSForm();
+            pos.Show();
+            this.Hide();
+        }
+
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+
+        private void btnPOS_Click_1(object sender, EventArgs e)
+        {
+            POSForm pos = new POSForm();
+            pos.Show();
             this.Close();
         }
+
+        private void btnMG_Click(object sender, EventArgs e)
+        {
+            Management management = new Management();
+            management.Show();
+            this.Close();
+        }
+
+        private void btnEX_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }

@@ -57,12 +57,6 @@
       <DependentUpon>ExpiredMedicinesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper.cs" />
-    <Compile Include="HomeForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HomeForm.Designer.cs">
-      <DependentUpon>HomeForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="InvoiceForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,11 +69,11 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="POSForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="POSForm.Designer.cs">
+      <DependentUpon>POSForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Invoice.cs" />
     <Compile Include="Login.cs" />
@@ -95,17 +89,14 @@
     <EmbeddedResource Include="ExpiredMedicinesForm.resx">
       <DependentUpon>ExpiredMedicinesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeForm.resx">
-      <DependentUpon>HomeForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="POSForm.resx">
+      <DependentUpon>POSForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>

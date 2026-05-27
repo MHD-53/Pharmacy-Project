@@ -18,15 +18,15 @@ namespace Pharmacy_Project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnLOGIN_Click(object sender, EventArgs e)
         {
             if (Login.CheckUser(txt_username.Text, txt_password.Text))
             {
                 MessageBox.Show("Login successful!");
-                HomeForm home = new HomeForm();
+                POSForm pos = new POSForm();
                 this.Hide();
-                home.FormClosed += (s, args) => Application.Exit();
-                home.Show();
+                
+                pos.Show();
             }
             else
             {
@@ -39,10 +39,14 @@ namespace Pharmacy_Project
 
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        
+
+        private void LoginForm_Load(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }
 
