@@ -143,7 +143,7 @@ namespace Pharmacy_Project
                         {
                             MessageBox.Show($"الكمية المتوفرة من {medName} هي فقط: {DataStorage.Medicines[j].Quantity}",
                                 "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return; // نوقف العملية كلها
+                            return;
                         }
                         if (qty <= 0)
                         {
@@ -180,6 +180,9 @@ namespace Pharmacy_Project
 
             invoice.CalculateTotal();
             DataStorage.Invoices.Add(invoice);
+
+            InvoiceForm inv = new InvoiceForm(invoice);
+            inv.ShowDialog();   
 
             MessageBox.Show($"تمت عملية الشراء بنجاح!\nالإجمالي: {invoice.Total} ل.س",
                 "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
