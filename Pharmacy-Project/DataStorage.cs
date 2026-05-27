@@ -14,9 +14,9 @@ namespace Pharmacy_Project
 
         public static void OriginalMedicines() // ميثود البيانات الابتدائية للأدوية
         {
-           Medicines.Add(new Medicine("Panadol","paracetamol","TST", 10.0, 100, new DateTime(2026,12,3), 1));
+           Medicines.Add(new Medicine("Panadol","paracetamol","TST", 10.0, 100, new DateTime(2026,12,10), 1));
            Medicines.Add(new Medicine("Sinadol", "par4", "gg", 5.0, 600, new DateTime(2024, 10, 3), 2));
-           Medicines.Add(new Medicine("OOanadol", "par", "aa", 8.0, 600, new DateTime(2000, 10, 3), 3));
+           Medicines.Add(new Medicine("OOanadol", "par", "aa", 8.0, 600, new DateTime(222, 10, 3), 3));
             
         }
     }
