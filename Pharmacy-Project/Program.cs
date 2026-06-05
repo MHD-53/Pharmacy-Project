@@ -16,7 +16,7 @@ namespace Pharmacy_Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            DataStorage.OriginalMedicines(); // تحميل الادوية قبل فتح البرنامج
+            DataStorage.StatringData(); // تحميل الادوية قبل فتح البرنامج
             Application.Run(new LoginForm());
         }
     }

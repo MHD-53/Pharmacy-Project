@@ -31,5 +31,6 @@ namespace Pharmacy_Project
             gd.DataSource = DataStorage.Medicines;
         }
         
+        
     }
 }

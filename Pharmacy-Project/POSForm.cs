@@ -15,7 +15,7 @@ namespace Pharmacy_Project
         public POSForm()
         {
             InitializeComponent();
-       
+            
            
 
             Cart_dataGridView.AutoGenerateColumns = false;
@@ -23,99 +23,50 @@ namespace Pharmacy_Project
             Cart_dataGridView.Columns.Clear();
 
             DataGridViewTextBoxColumn nameCol = new DataGridViewTextBoxColumn();
-            nameCol.HeaderText = "Na";
+            nameCol.HeaderText = "Name";
             nameCol.ReadOnly = true;
 
+            DataGridViewTextBoxColumn ScCol = new DataGridViewTextBoxColumn();
+            ScCol.HeaderText = "Scientific Name";
+            ScCol.ReadOnly = true;
+
+            DataGridViewTextBoxColumn ManCol = new DataGridViewTextBoxColumn();
+            ManCol.HeaderText = "Manufacturer";
+            ManCol.ReadOnly = true;
+
             DataGridViewTextBoxColumn priceCol = new DataGridViewTextBoxColumn();
-            priceCol.HeaderText = "Pr";
+            priceCol.HeaderText = "Price";
             priceCol.ReadOnly = true;
 
             DataGridViewTextBoxColumn qtyCol = new DataGridViewTextBoxColumn();
-            qtyCol.HeaderText = "Qt";
+            qtyCol.HeaderText = "Quantity";
             qtyCol.ReadOnly = false;
 
             Cart_dataGridView.Columns.Add(nameCol);
+            Cart_dataGridView.Columns.Add(ScCol);
+            Cart_dataGridView.Columns.Add(ManCol);
             Cart_dataGridView.Columns.Add(priceCol);
             Cart_dataGridView.Columns.Add(qtyCol);
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            Show_dataGridView.DataSource = DataStorage.Medicines;
+           
         }
 
-        private void cmbFilter_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            List<Medicine> result = new List<Medicine>(DataStorage.Medicines);
-            switch (cmbFilter.SelectedIndex)
-            {
-                case 0:
-                    for (int i = 0; i < result.Count; i++)
-                    {
-                       for (int j = i + 1; j < result.Count; j++)
-                        {
-                            if (string.Compare(result[i].Manufacturer, result[j].Manufacturer) > 0)
-                            {
-                                Medicine temp = result[i];
-                                result[i] = result[j];
-                                result[j] = temp;
-                            }
-                        }
-                    }
-                    break;
+       
 
-                case 1:
-                    result = result.OrderBy(m => m.Price).ToList();
-                    break;
-
-
-                case 2:
-                    result = result.OrderBy(m => m.ExpiryDate).ToList();
-                    break;
-            }
-
-            Show_dataGridView.DataSource = null;
-            Show_dataGridView.DataSource = result;
-        }
-
-        private void Show_dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Show_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
        
-            if (e.RowIndex < 0) return;
-
-            // نقرأ الاسم من الصف المضغوط
-            string medName = Show_dataGridView.Rows[e.RowIndex].Cells["Name"].Value.ToString();
-
-            // نبحث عن الدواء في القائمة
-            Medicine selectedMed = null;
-            for (int i = 0; i < DataStorage.Medicines.Count; i++)
-            {
-                if (DataStorage.Medicines[i].Name == medName)
-                {
-                    selectedMed = DataStorage.Medicines[i];
-                    break;
-                }
-            }
-
-            // تحقق إذا الدواء موجود مسبقاً في السلة
-            for (int i = 0; i < Cart_dataGridView.Rows.Count; i++)
-            {
-                if (Cart_dataGridView.Rows[i].Cells[0].Value.ToString() == selectedMed.Name)
-                {
-                    MessageBox.Show("الدواء موجود مسبقاً في السلة!", "تنبيه",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-            }
-
-            // إضافة الدواء للسلة بكمية 0
-            Cart_dataGridView.Rows.Add(selectedMed.Name, selectedMed.Price, 0);
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
        
-            // التحقق من أن السلة مش فارغة
+            // التحقق أن السلة مو فارغة
             if (Cart_dataGridView.Rows.Count == 0)
             {
                 MessageBox.Show("السلة فارغة!", "تنبيه",
@@ -123,29 +74,30 @@ namespace Pharmacy_Project
                 return;
             }
 
-            // التحقق من الكميات أولاً قبل أي عملية
+            // التحقق من الكميات أولا قبل أي عملية
             for (int i = 0; i < Cart_dataGridView.Rows.Count; i++)
             {
                 string medName = Cart_dataGridView.Rows[i].Cells[0].Value.ToString();
-                if (Cart_dataGridView.Rows[i].Cells[2].Value == null || Cart_dataGridView.Rows[i].Cells[2].Value.ToString() == "")
+                if (Cart_dataGridView.Rows[i].Cells[4].Value == null || Cart_dataGridView.Rows[i].Cells[4].Value.ToString() == "")
                 {
                     MessageBox.Show($"الرجاء إدخال كمية للدواء: {medName}",
                         "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                int qty = int.Parse(Cart_dataGridView.Rows[i].Cells[2].Value.ToString());
+
+                int qu = int.Parse(Cart_dataGridView.Rows[i].Cells[4].Value.ToString());
 
                 for (int j = 0; j < DataStorage.Medicines.Count; j++)
                 {
                     if (DataStorage.Medicines[j].Name == medName)
                     {
-                        if (qty > DataStorage.Medicines[j].Quantity)
+                        if (qu > DataStorage.Medicines[j].Quantity)
                         {
                             MessageBox.Show($"الكمية المتوفرة من {medName} هي فقط: {DataStorage.Medicines[j].Quantity}",
                                 "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
-                        if (qty <= 0)
+                        if (qu <= 0)
                         {
                             MessageBox.Show($"الرجاء إدخال كمية صحيحة للدواء: {medName}",
                                 "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -156,23 +108,23 @@ namespace Pharmacy_Project
                 }
             }
 
-            // بعد التحقق، ننشئ الفاتورة
+            // بعد التحقق ننشئ الفاتورة
             Invoice invoice = new Invoice();
 
             for (int i = 0; i < Cart_dataGridView.Rows.Count; i++)
             {
                 string medName = Cart_dataGridView.Rows[i].Cells[0].Value.ToString();
-                int qty = int.Parse(Cart_dataGridView.Rows[i].Cells[2].Value.ToString());
+                int qu = int.Parse(Cart_dataGridView.Rows[i].Cells[4].Value.ToString());
 
                 for (int j = 0; j < DataStorage.Medicines.Count; j++)
                 {
                     if (DataStorage.Medicines[j].Name == medName)
                     {
                         invoice.Medicines.Add(DataStorage.Medicines[j]);
-                        invoice.Quantities.Add(qty);
+                        invoice.Quantities.Add(qu);
 
                         // تخفيض المخزون
-                        DataStorage.Medicines[j].Quantity -= qty;
+                        DataStorage.Medicines[j].Quantity -= qu;
                         break;
                     }
                 }
@@ -184,27 +136,21 @@ namespace Pharmacy_Project
             InvoiceForm inv = new InvoiceForm(invoice);
             inv.ShowDialog();   
 
-            MessageBox.Show($"تمت عملية الشراء بنجاح!\nالإجمالي: {invoice.Total} ل.س",
+            MessageBox.Show($"تمت عملية الشراء بنجاح!\nالإجمالي: {invoice.Total} ",
                 "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // تصفير السلة
             Cart_dataGridView.Rows.Clear();
 
-            Helper.Refresh(Show_dataGridView);
+           
         }
 
        
-        private void Exitbtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+       
 
        
 
-        private void btnPOS_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnMG_Click(object sender, EventArgs e)
         {
@@ -218,6 +164,75 @@ namespace Pharmacy_Project
             ExpiredMedicinesForm exp = new ExpiredMedicinesForm();
             exp.Show();
             this.Close();
+        }
+
+       
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm login = new LoginForm();
+            login.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            
+            if (SelectedID_txt.Text == "")
+            {
+                MessageBox.Show("الرجاء إدخال رقم الدواء المراد شرائه!", "تنبيه",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            int SelectedID = int.Parse(SelectedID_txt.Text);
+
+            // نبحث عن الدواء في القائمة
+            Medicine SelectedMed = null;
+            for (int i = 0; i < DataStorage.Medicines.Count; i++)
+            {
+                if (DataStorage.Medicines[i].Id == SelectedID)
+                {
+                    SelectedMed = DataStorage.Medicines[i];
+                    break;
+                }
+            }
+
+            // تحقق إذا الدواء موجود مسبقاً في السلة
+            for (int i = 0; i < Cart_dataGridView.Rows.Count; i++)
+            {
+                if (Cart_dataGridView.Rows[i].Cells[0].Value.ToString() == SelectedMed.Name)
+                {
+                    MessageBox.Show("الدواء موجود مسبقاً في السلة!", "تنبيه",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+            }
+
+            // إضافة الدواء للسلة بكمية 0
+            Cart_dataGridView.Rows.Add(SelectedMed.Name,SelectedMed.ScientificName,SelectedMed.Manufacturer,SelectedMed.Price, 0);
+        }
+
+        private void logout_btn_MouseEnter(object sender, EventArgs e)
+        {
+            logout_btn.FillColor = Color.Red;
+        }
+
+        private void logout_btn_MouseLeave(object sender, EventArgs e)
+        {
+            logout_btn.FillColor = Color.DimGray;
+        }
+
+        private void SelectedID_txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
     

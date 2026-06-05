@@ -19,6 +19,8 @@ namespace Pharmacy_Project
 
         private void ExpiredMedicinesForm_Load(object sender, EventArgs e)
         {
+            ex_gd.AutoGenerateColumns = false;
+            
             List<Medicine> expired = new List<Medicine>();
             for (int i = 0; i < DataStorage.Medicines.Count; i++)
             {
@@ -28,10 +30,11 @@ namespace Pharmacy_Project
                 }
             } 
             
-            exGD.DataSource = expired;
+            ex_gd.DataSource = expired;
+           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void destroy_btn_Click(object sender, EventArgs e)
         {
             for (int i = DataStorage.Medicines.Count -1; i >= 0; i--)
             {
@@ -47,13 +50,9 @@ namespace Pharmacy_Project
             this.Hide();
         }
 
-        private void Exitbtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
-
-        private void btnPOS_Click_1(object sender, EventArgs e)
+        private void btnPOS_Click(object sender, EventArgs e)
         {
             POSForm pos = new POSForm();
             pos.Show();
@@ -67,11 +66,28 @@ namespace Pharmacy_Project
             this.Close();
         }
 
-        private void btnEX_Click_1(object sender, EventArgs e)
+       
+
+        private void btn_exit_Click_1(object sender, EventArgs e)
         {
-            
+            Application.Exit();
         }
 
-        
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginForm login = new LoginForm();
+            login.Show();
+        }
+
+        private void logout_btn_MouseEnter(object sender, EventArgs e)
+        {
+            logout_btn.FillColor = Color.Red;
+        }
+
+        private void logout_btn_MouseLeave(object sender, EventArgs e)
+        {
+            logout_btn.FillColor = Color.DimGray;
+        }
     }
 }

@@ -28,111 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.gd = new System.Windows.Forms.DataGridView();
-            this.add_btn = new System.Windows.Forms.Button();
-            this.textBoxN = new System.Windows.Forms.TextBox();
-            this.textBoxP = new System.Windows.Forms.TextBox();
-            this.textBoxM = new System.Windows.Forms.TextBox();
-            this.textBoxS = new System.Windows.Forms.TextBox();
-            this.textBoxQ = new System.Windows.Forms.TextBox();
-            this.dt = new System.Windows.Forms.DateTimePicker();
-            this.update_btn = new System.Windows.Forms.Button();
-            this.remove_btn = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Exitbtn = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMG = new System.Windows.Forms.Button();
-            this.btnEX = new System.Windows.Forms.Button();
-            this.btnPOS = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.gd)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.gd_management = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Filter_cmb = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.add_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.update_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.remove_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Name_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Manufacturer_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.ScientificName_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Price_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Quantity_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dt_picker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnEX = new Guna.UI2.WinForms.Guna2Button();
+            this.btnMG = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPOS = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Ex_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.qu_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.Sname_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.man_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.pri_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.name_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
+            this.Clear_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.gd_management)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gd
-            // 
-            this.gd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gd.Location = new System.Drawing.Point(265, 63);
-            this.gd.Name = "gd";
-            this.gd.RowHeadersWidth = 51;
-            this.gd.RowTemplate.Height = 26;
-            this.gd.Size = new System.Drawing.Size(504, 303);
-            this.gd.TabIndex = 0;
-            this.gd.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gd_CellClick);
-            // 
-            // add_btn
-            // 
-            this.add_btn.Location = new System.Drawing.Point(242, 438);
-            this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(75, 23);
-            this.add_btn.TabIndex = 1;
-            this.add_btn.Text = "add";
-            this.add_btn.UseVisualStyleBackColor = true;
-            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
-            // 
-            // textBoxN
-            // 
-            this.textBoxN.Location = new System.Drawing.Point(820, 87);
-            this.textBoxN.Name = "textBoxN";
-            this.textBoxN.Size = new System.Drawing.Size(100, 24);
-            this.textBoxN.TabIndex = 2;
-            // 
-            // textBoxP
-            // 
-            this.textBoxP.Location = new System.Drawing.Point(831, 262);
-            this.textBoxP.Name = "textBoxP";
-            this.textBoxP.Size = new System.Drawing.Size(100, 24);
-            this.textBoxP.TabIndex = 3;
-            // 
-            // textBoxM
-            // 
-            this.textBoxM.Location = new System.Drawing.Point(820, 199);
-            this.textBoxM.Name = "textBoxM";
-            this.textBoxM.Size = new System.Drawing.Size(100, 24);
-            this.textBoxM.TabIndex = 4;
-            // 
-            // textBoxS
-            // 
-            this.textBoxS.Location = new System.Drawing.Point(807, 129);
-            this.textBoxS.Name = "textBoxS";
-            this.textBoxS.Size = new System.Drawing.Size(100, 24);
-            this.textBoxS.TabIndex = 5;
-            // 
-            // textBoxQ
-            // 
-            this.textBoxQ.Location = new System.Drawing.Point(831, 311);
-            this.textBoxQ.Name = "textBoxQ";
-            this.textBoxQ.Size = new System.Drawing.Size(100, 24);
-            this.textBoxQ.TabIndex = 6;
-            // 
-            // dt
-            // 
-            this.dt.Location = new System.Drawing.Point(775, 366);
-            this.dt.Name = "dt";
-            this.dt.Size = new System.Drawing.Size(200, 24);
-            this.dt.TabIndex = 7;
-            // 
-            // update_btn
-            // 
-            this.update_btn.Location = new System.Drawing.Point(333, 439);
-            this.update_btn.Name = "update_btn";
-            this.update_btn.Size = new System.Drawing.Size(75, 23);
-            this.update_btn.TabIndex = 8;
-            this.update_btn.Text = "update";
-            this.update_btn.UseVisualStyleBackColor = true;
-            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
-            // 
-            // remove_btn
-            // 
-            this.remove_btn.Location = new System.Drawing.Point(476, 438);
-            this.remove_btn.Name = "remove_btn";
-            this.remove_btn.Size = new System.Drawing.Size(75, 23);
-            this.remove_btn.TabIndex = 9;
-            this.remove_btn.Text = "remove";
-            this.remove_btn.UseVisualStyleBackColor = true;
-            this.remove_btn.Click += new System.EventHandler(this.remove_btn_Click);
             // 
             // Exitbtn
             // 
-            this.Exitbtn.Location = new System.Drawing.Point(1016, 47);
+            this.Exitbtn.Location = new System.Drawing.Point(1074, 27);
             this.Exitbtn.Name = "Exitbtn";
             this.Exitbtn.Size = new System.Drawing.Size(75, 23);
             this.Exitbtn.TabIndex = 10;
@@ -140,92 +74,525 @@
             this.Exitbtn.UseVisualStyleBackColor = true;
             this.Exitbtn.Click += new System.EventHandler(this.Exitbtn_Click);
             // 
-            // panel1
+            // gd_management
             // 
-            this.panel1.BackColor = System.Drawing.Color.CadetBlue;
-            this.panel1.Controls.Add(this.btnMG);
-            this.panel1.Controls.Add(this.btnEX);
-            this.panel1.Controls.Add(this.btnPOS);
-            this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 657);
-            this.panel1.TabIndex = 11;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.gd_management.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gd_management.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            this.gd_management.ColumnHeadersHeight = 4;
+            this.gd_management.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gd_management.DefaultCellStyle = dataGridViewCellStyle15;
+            this.gd_management.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gd_management.Location = new System.Drawing.Point(517, 142);
+            this.gd_management.Name = "gd_management";
+            this.gd_management.RowHeadersVisible = false;
+            this.gd_management.RowHeadersWidth = 51;
+            this.gd_management.RowTemplate.Height = 26;
+            this.gd_management.Size = new System.Drawing.Size(648, 488);
+            this.gd_management.TabIndex = 12;
+            this.gd_management.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gd_management.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.gd_management.ThemeStyle.HeaderStyle.Height = 4;
+            this.gd_management.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Tahoma", 8F);
+            this.gd_management.ThemeStyle.RowsStyle.Height = 26;
+            this.gd_management.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gd_CellClick);
             // 
-            // btnMG
+            // Filter_cmb
             // 
-            this.btnMG.Location = new System.Drawing.Point(24, 127);
-            this.btnMG.Name = "btnMG";
-            this.btnMG.Size = new System.Drawing.Size(127, 108);
-            this.btnMG.TabIndex = 4;
-            this.btnMG.Text = "Management";
-            this.btnMG.UseVisualStyleBackColor = true;
-            this.btnMG.Click += new System.EventHandler(this.btnMG_Click_1);
+            this.Filter_cmb.BackColor = System.Drawing.Color.Transparent;
+            this.Filter_cmb.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Filter_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Filter_cmb.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Filter_cmb.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Filter_cmb.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Filter_cmb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.Filter_cmb.ItemHeight = 30;
+            this.Filter_cmb.Items.AddRange(new object[] {
+            "Manufacturer",
+            "Price",
+            "ExpiryDate"});
+            this.Filter_cmb.Location = new System.Drawing.Point(604, 81);
+            this.Filter_cmb.Name = "Filter_cmb";
+            this.Filter_cmb.Size = new System.Drawing.Size(184, 36);
+            this.Filter_cmb.TabIndex = 13;
+            this.Filter_cmb.SelectedIndexChanged += new System.EventHandler(this.Filter_cmb_SelectedIndexChanged);
+            // 
+            // add_btn
+            // 
+            this.add_btn.BorderRadius = 20;
+            this.add_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.add_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.add_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.add_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.add_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add_btn.ForeColor = System.Drawing.Color.White;
+            this.add_btn.Location = new System.Drawing.Point(9, 369);
+            this.add_btn.Name = "add_btn";
+            this.add_btn.Size = new System.Drawing.Size(151, 45);
+            this.add_btn.TabIndex = 14;
+            this.add_btn.Text = "Add";
+            this.add_btn.Click += new System.EventHandler(this.add_btn_Click);
+            // 
+            // update_btn
+            // 
+            this.update_btn.BorderRadius = 20;
+            this.update_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.update_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.update_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update_btn.ForeColor = System.Drawing.Color.White;
+            this.update_btn.Location = new System.Drawing.Point(8, 448);
+            this.update_btn.Name = "update_btn";
+            this.update_btn.Size = new System.Drawing.Size(152, 45);
+            this.update_btn.TabIndex = 15;
+            this.update_btn.Text = "Update";
+            this.update_btn.Click += new System.EventHandler(this.update_btn_Click);
+            // 
+            // remove_btn
+            // 
+            this.remove_btn.BorderRadius = 20;
+            this.remove_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.remove_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.remove_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.remove_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.remove_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remove_btn.ForeColor = System.Drawing.Color.White;
+            this.remove_btn.Location = new System.Drawing.Point(166, 369);
+            this.remove_btn.Name = "remove_btn";
+            this.remove_btn.Size = new System.Drawing.Size(151, 45);
+            this.remove_btn.TabIndex = 16;
+            this.remove_btn.Text = "Remove";
+            this.remove_btn.Click += new System.EventHandler(this.remove_btn_Click);
+            // 
+            // Name_txt
+            // 
+            this.Name_txt.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.Name_txt.BorderRadius = 20;
+            this.Name_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Name_txt.DefaultText = "";
+            this.Name_txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Name_txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Name_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Name_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Name_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Name_txt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Name_txt.ForeColor = System.Drawing.Color.Black;
+            this.Name_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Name_txt.Location = new System.Drawing.Point(120, 25);
+            this.Name_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name_txt.Name = "Name_txt";
+            this.Name_txt.PlaceholderText = "";
+            this.Name_txt.SelectedText = "";
+            this.Name_txt.Size = new System.Drawing.Size(180, 48);
+            this.Name_txt.TabIndex = 17;
+            // 
+            // Manufacturer_txt
+            // 
+            this.Manufacturer_txt.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.Manufacturer_txt.BorderRadius = 20;
+            this.Manufacturer_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Manufacturer_txt.DefaultText = "";
+            this.Manufacturer_txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Manufacturer_txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Manufacturer_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Manufacturer_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Manufacturer_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Manufacturer_txt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Manufacturer_txt.ForeColor = System.Drawing.Color.Black;
+            this.Manufacturer_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Manufacturer_txt.Location = new System.Drawing.Point(120, 137);
+            this.Manufacturer_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Manufacturer_txt.Name = "Manufacturer_txt";
+            this.Manufacturer_txt.PlaceholderText = "";
+            this.Manufacturer_txt.SelectedText = "";
+            this.Manufacturer_txt.Size = new System.Drawing.Size(180, 48);
+            this.Manufacturer_txt.TabIndex = 18;
+            // 
+            // ScientificName_txt
+            // 
+            this.ScientificName_txt.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.ScientificName_txt.BorderRadius = 20;
+            this.ScientificName_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ScientificName_txt.DefaultText = "";
+            this.ScientificName_txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.ScientificName_txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.ScientificName_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ScientificName_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.ScientificName_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ScientificName_txt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScientificName_txt.ForeColor = System.Drawing.Color.Black;
+            this.ScientificName_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ScientificName_txt.Location = new System.Drawing.Point(120, 81);
+            this.ScientificName_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ScientificName_txt.Name = "ScientificName_txt";
+            this.ScientificName_txt.PlaceholderText = "";
+            this.ScientificName_txt.SelectedText = "";
+            this.ScientificName_txt.Size = new System.Drawing.Size(180, 48);
+            this.ScientificName_txt.TabIndex = 19;
+            // 
+            // Price_txt
+            // 
+            this.Price_txt.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.Price_txt.BorderRadius = 20;
+            this.Price_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Price_txt.DefaultText = "";
+            this.Price_txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Price_txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Price_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Price_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Price_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Price_txt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price_txt.ForeColor = System.Drawing.Color.Black;
+            this.Price_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Price_txt.Location = new System.Drawing.Point(120, 193);
+            this.Price_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Price_txt.Name = "Price_txt";
+            this.Price_txt.PlaceholderText = "";
+            this.Price_txt.SelectedText = "";
+            this.Price_txt.Size = new System.Drawing.Size(180, 48);
+            this.Price_txt.TabIndex = 20;
+            // 
+            // Quantity_txt
+            // 
+            this.Quantity_txt.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.Quantity_txt.BorderRadius = 20;
+            this.Quantity_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Quantity_txt.DefaultText = "";
+            this.Quantity_txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Quantity_txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Quantity_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Quantity_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Quantity_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Quantity_txt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Quantity_txt.ForeColor = System.Drawing.Color.Black;
+            this.Quantity_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Quantity_txt.Location = new System.Drawing.Point(120, 249);
+            this.Quantity_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Quantity_txt.Name = "Quantity_txt";
+            this.Quantity_txt.PlaceholderText = "";
+            this.Quantity_txt.SelectedText = "";
+            this.Quantity_txt.Size = new System.Drawing.Size(180, 48);
+            this.Quantity_txt.TabIndex = 21;
+            // 
+            // dt_picker
+            // 
+            this.dt_picker.BackColor = System.Drawing.Color.Transparent;
+            this.dt_picker.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.dt_picker.BorderRadius = 20;
+            this.dt_picker.BorderThickness = 1;
+            this.dt_picker.Checked = true;
+            this.dt_picker.FillColor = System.Drawing.Color.White;
+            this.dt_picker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dt_picker.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dt_picker.Location = new System.Drawing.Point(120, 312);
+            this.dt_picker.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dt_picker.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dt_picker.Name = "dt_picker";
+            this.dt_picker.Size = new System.Drawing.Size(180, 36);
+            this.dt_picker.TabIndex = 22;
+            this.dt_picker.Value = new System.DateTime(2026, 6, 5, 6, 44, 40, 299);
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Black;
+            this.guna2Panel1.Controls.Add(this.logout_btn);
+            this.guna2Panel1.Controls.Add(this.btnEX);
+            this.guna2Panel1.Controls.Add(this.btnMG);
+            this.guna2Panel1.Controls.Add(this.btnPOS);
+            this.guna2Panel1.Location = new System.Drawing.Point(-1, 73);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(195, 565);
+            this.guna2Panel1.TabIndex = 23;
             // 
             // btnEX
             // 
-            this.btnEX.Location = new System.Drawing.Point(24, 241);
+            this.btnEX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEX.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEX.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEX.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEX.FillColor = System.Drawing.Color.Black;
+            this.btnEX.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEX.ForeColor = System.Drawing.Color.White;
+            this.btnEX.Location = new System.Drawing.Point(0, 126);
             this.btnEX.Name = "btnEX";
-            this.btnEX.Size = new System.Drawing.Size(127, 108);
-            this.btnEX.TabIndex = 3;
-            this.btnEX.Text = "Ex";
-            this.btnEX.UseVisualStyleBackColor = true;
-            this.btnEX.Click += new System.EventHandler(this.btnEX_Click_1);
+            this.btnEX.Size = new System.Drawing.Size(195, 84);
+            this.btnEX.TabIndex = 2;
+            this.btnEX.Text = "Expired Medicines";
+            this.btnEX.Click += new System.EventHandler(this.btnEX_Click);
+            // 
+            // btnMG
+            // 
+            this.btnMG.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMG.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMG.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMG.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMG.FillColor = System.Drawing.Color.Turquoise;
+            this.btnMG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMG.ForeColor = System.Drawing.Color.White;
+            this.btnMG.Location = new System.Drawing.Point(0, 58);
+            this.btnMG.Name = "btnMG";
+            this.btnMG.Size = new System.Drawing.Size(195, 71);
+            this.btnMG.TabIndex = 1;
+            this.btnMG.Text = "Management";
             // 
             // btnPOS
             // 
-            this.btnPOS.Location = new System.Drawing.Point(24, 13);
+            this.btnPOS.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPOS.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPOS.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPOS.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPOS.FillColor = System.Drawing.Color.Black;
+            this.btnPOS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPOS.ForeColor = System.Drawing.Color.White;
+            this.btnPOS.Location = new System.Drawing.Point(0, 0);
             this.btnPOS.Name = "btnPOS";
-            this.btnPOS.Size = new System.Drawing.Size(127, 108);
-            this.btnPOS.TabIndex = 2;
+            this.btnPOS.Size = new System.Drawing.Size(195, 61);
+            this.btnPOS.TabIndex = 0;
             this.btnPOS.Text = "POS";
-            this.btnPOS.UseVisualStyleBackColor = true;
-            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click_1);
+            this.btnPOS.Click += new System.EventHandler(this.btnPOS_Click);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Tahoma", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(-1, -1);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(1178, 76);
+            this.guna2HtmlLabel1.TabIndex = 24;
+            this.guna2HtmlLabel1.Text = "Manage Medicines";
+            this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.Clear_btn);
+            this.guna2Panel2.Controls.Add(this.Ex_lbl);
+            this.guna2Panel2.Controls.Add(this.qu_lbl);
+            this.guna2Panel2.Controls.Add(this.Sname_lbl);
+            this.guna2Panel2.Controls.Add(this.man_lbl);
+            this.guna2Panel2.Controls.Add(this.pri_lbl);
+            this.guna2Panel2.Controls.Add(this.name_lbl);
+            this.guna2Panel2.Controls.Add(this.add_btn);
+            this.guna2Panel2.Controls.Add(this.update_btn);
+            this.guna2Panel2.Controls.Add(this.remove_btn);
+            this.guna2Panel2.Controls.Add(this.dt_picker);
+            this.guna2Panel2.Controls.Add(this.Name_txt);
+            this.guna2Panel2.Controls.Add(this.Quantity_txt);
+            this.guna2Panel2.Controls.Add(this.ScientificName_txt);
+            this.guna2Panel2.Controls.Add(this.Price_txt);
+            this.guna2Panel2.Controls.Add(this.Manufacturer_txt);
+            this.guna2Panel2.Location = new System.Drawing.Point(191, 81);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(320, 555);
+            this.guna2Panel2.TabIndex = 25;
+            // 
+            // Ex_lbl
+            // 
+            this.Ex_lbl.AutoSize = false;
+            this.Ex_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Ex_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ex_lbl.Location = new System.Drawing.Point(17, 307);
+            this.Ex_lbl.Name = "Ex_lbl";
+            this.Ex_lbl.Size = new System.Drawing.Size(92, 41);
+            this.Ex_lbl.TabIndex = 28;
+            this.Ex_lbl.Text = "Ex date:";
+            this.Ex_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // qu_lbl
+            // 
+            this.qu_lbl.AutoSize = false;
+            this.qu_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.qu_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.qu_lbl.Location = new System.Drawing.Point(17, 249);
+            this.qu_lbl.Name = "qu_lbl";
+            this.qu_lbl.Size = new System.Drawing.Size(92, 41);
+            this.qu_lbl.TabIndex = 27;
+            this.qu_lbl.Text = "Quantity:";
+            this.qu_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Sname_lbl
+            // 
+            this.Sname_lbl.AutoSize = false;
+            this.Sname_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.Sname_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sname_lbl.Location = new System.Drawing.Point(8, 81);
+            this.Sname_lbl.Name = "Sname_lbl";
+            this.Sname_lbl.Size = new System.Drawing.Size(106, 41);
+            this.Sname_lbl.TabIndex = 26;
+            this.Sname_lbl.Text = "Scientific:";
+            this.Sname_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // man_lbl
+            // 
+            this.man_lbl.AutoSize = false;
+            this.man_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.man_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.man_lbl.Location = new System.Drawing.Point(0, 137);
+            this.man_lbl.Name = "man_lbl";
+            this.man_lbl.Size = new System.Drawing.Size(120, 41);
+            this.man_lbl.TabIndex = 25;
+            this.man_lbl.Text = "Manufacture";
+            this.man_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pri_lbl
+            // 
+            this.pri_lbl.AutoSize = false;
+            this.pri_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.pri_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pri_lbl.Location = new System.Drawing.Point(17, 193);
+            this.pri_lbl.Name = "pri_lbl";
+            this.pri_lbl.Size = new System.Drawing.Size(92, 41);
+            this.pri_lbl.TabIndex = 24;
+            this.pri_lbl.Text = "Price :";
+            this.pri_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // name_lbl
+            // 
+            this.name_lbl.AutoSize = false;
+            this.name_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.name_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lbl.Location = new System.Drawing.Point(17, 25);
+            this.name_lbl.Name = "name_lbl";
+            this.name_lbl.Size = new System.Drawing.Size(92, 41);
+            this.name_lbl.TabIndex = 23;
+            this.name_lbl.Text = "Name :";
+            this.name_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(531, 81);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(67, 24);
+            this.guna2HtmlLabel2.TabIndex = 26;
+            this.guna2HtmlLabel2.Text = "Sort By:";
+            // 
+            // btn_exit
+            // 
+            this.btn_exit.BackColor = System.Drawing.Color.Red;
+            this.btn_exit.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_exit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_exit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_exit.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btn_exit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_exit.ForeColor = System.Drawing.Color.Black;
+            this.btn_exit.Location = new System.Drawing.Point(1108, -1);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(69, 46);
+            this.btn_exit.TabIndex = 27;
+            this.btn_exit.Text = "X";
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
+            // Clear_btn
+            // 
+            this.Clear_btn.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.Clear_btn.BorderRadius = 20;
+            this.Clear_btn.BorderThickness = 1;
+            this.Clear_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Clear_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Clear_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Clear_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Clear_btn.FillColor = System.Drawing.Color.White;
+            this.Clear_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_btn.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Clear_btn.Location = new System.Drawing.Point(165, 448);
+            this.Clear_btn.Name = "Clear_btn";
+            this.Clear_btn.Size = new System.Drawing.Size(152, 45);
+            this.Clear_btn.TabIndex = 29;
+            this.Clear_btn.Text = "Clear";
+            this.Clear_btn.Click += new System.EventHandler(this.Clear_btn_Click);
+            // 
+            // logout_btn
+            // 
+            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logout_btn.FillColor = System.Drawing.Color.DimGray;
+            this.logout_btn.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(0, 520);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(195, 45);
+            this.logout_btn.TabIndex = 3;
+            this.logout_btn.Text = "Log out";
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            this.logout_btn.MouseEnter += new System.EventHandler(this.logout_btn_MouseEnter);
+            this.logout_btn.MouseLeave += new System.EventHandler(this.logout_btn_MouseLeave);
             // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1154, 702);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1177, 637);
+            this.Controls.Add(this.btn_exit);
+            this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2HtmlLabel1);
+            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.Filter_cmb);
+            this.Controls.Add(this.gd_management);
             this.Controls.Add(this.Exitbtn);
-            this.Controls.Add(this.remove_btn);
-            this.Controls.Add(this.update_btn);
-            this.Controls.Add(this.dt);
-            this.Controls.Add(this.textBoxQ);
-            this.Controls.Add(this.textBoxS);
-            this.Controls.Add(this.textBoxM);
-            this.Controls.Add(this.textBoxP);
-            this.Controls.Add(this.textBoxN);
-            this.Controls.Add(this.add_btn);
-            this.Controls.Add(this.gd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Management";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management";
             this.Load += new System.EventHandler(this.Management_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gd)).EndInit();
-            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gd_management)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gd;
-        private System.Windows.Forms.Button add_btn;
-        private System.Windows.Forms.TextBox textBoxN;
-        private System.Windows.Forms.TextBox textBoxP;
-        private System.Windows.Forms.TextBox textBoxM;
-        private System.Windows.Forms.TextBox textBoxS;
-        private System.Windows.Forms.TextBox textBoxQ;
-        private System.Windows.Forms.DateTimePicker dt;
-        private System.Windows.Forms.Button update_btn;
-        private System.Windows.Forms.Button remove_btn;
         private System.Windows.Forms.Button Exitbtn;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnMG;
-        private System.Windows.Forms.Button btnEX;
-        private System.Windows.Forms.Button btnPOS;
+        private Guna.UI2.WinForms.Guna2DataGridView gd_management;
+        private Guna.UI2.WinForms.Guna2ComboBox Filter_cmb;
+        private Guna.UI2.WinForms.Guna2Button add_btn;
+        private Guna.UI2.WinForms.Guna2Button update_btn;
+        private Guna.UI2.WinForms.Guna2Button remove_btn;
+        private Guna.UI2.WinForms.Guna2TextBox Name_txt;
+        private Guna.UI2.WinForms.Guna2TextBox Manufacturer_txt;
+        private Guna.UI2.WinForms.Guna2TextBox ScientificName_txt;
+        private Guna.UI2.WinForms.Guna2TextBox Price_txt;
+        private Guna.UI2.WinForms.Guna2TextBox Quantity_txt;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dt_picker;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnEX;
+        private Guna.UI2.WinForms.Guna2Button btnMG;
+        private Guna.UI2.WinForms.Guna2Button btnPOS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel name_lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel qu_lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Sname_lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel man_lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel pri_lbl;
+        private Guna.UI2.WinForms.Guna2HtmlLabel Ex_lbl;
+        private Guna.UI2.WinForms.Guna2Button btn_exit;
+        private Guna.UI2.WinForms.Guna2Button Clear_btn;
+        private Guna.UI2.WinForms.Guna2Button logout_btn;
     }
 }
