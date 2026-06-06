@@ -47,7 +47,14 @@ namespace Pharmacy_Project
             Cart_dataGridView.Columns.Add(ManCol);
             Cart_dataGridView.Columns.Add(priceCol);
             Cart_dataGridView.Columns.Add(qtyCol);
-            
+
+            Cart_dataGridView.ColumnHeadersHeight= 28;
+
+            Cart_dataGridView.DefaultCellStyle.Font = new Font("Arial", 12);
+            Cart_dataGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12);
+            Cart_dataGridView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            Cart_dataGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -55,13 +62,6 @@ namespace Pharmacy_Project
            
         }
 
-       
-
-        private void Show_dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-       
-            
-        }
 
         private void Buy_btn_Click(object sender, EventArgs e)
         {
@@ -131,6 +131,10 @@ namespace Pharmacy_Project
             }
 
             invoice.CalculateTotal();
+
+            // انشاء ملف PDF للفاتورة
+            InvoiceGenerator.CreatePdfInvoice(invoice);
+
             DataStorage.Invoices.Add(invoice);
 
             InvoiceForm inv = new InvoiceForm(invoice);
@@ -145,12 +149,7 @@ namespace Pharmacy_Project
            
         }
 
-       
-       
-
-       
-
-       
+      
 
         private void btnMG_Click(object sender, EventArgs e)
         {
@@ -189,7 +188,9 @@ namespace Pharmacy_Project
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            int SelectedID = int.Parse(SelectedID_txt.Text);
+
+            int SelectedID = int.Parse(SelectedID_txt.Text.Trim());
+            int Qu = (int)Qu_NumUpDown.Value;
 
             // نبحث عن الدواء في القائمة
             Medicine SelectedMed = null;
@@ -214,7 +215,7 @@ namespace Pharmacy_Project
             }
 
             // إضافة الدواء للسلة بكمية 0
-            Cart_dataGridView.Rows.Add(SelectedMed.Name,SelectedMed.ScientificName,SelectedMed.Manufacturer,SelectedMed.Price, 0);
+            Cart_dataGridView.Rows.Add(SelectedMed.Name,SelectedMed.ScientificName,SelectedMed.Manufacturer,SelectedMed.Price, Qu);
         }
 
         private void logout_btn_MouseEnter(object sender, EventArgs e)

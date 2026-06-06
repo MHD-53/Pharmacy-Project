@@ -23,6 +23,9 @@ namespace Pharmacy_Project
         private void Management_Load(object sender, EventArgs e)
         {
             gd_management.DataSource = DataStorage.Medicines;
+            gd_management.ReadOnly = true;
+            gd_management.ColumnHeadersHeight = 28;
+            gd_management.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void add_btn_Click(object sender, EventArgs e)
@@ -33,13 +36,13 @@ namespace Pharmacy_Project
                 return;
             }
 
-            string n = Name_txt.Text;
-            string sn = ScientificName_txt.Text;
-            string m = Manufacturer_txt.Text;
-            double p = double.Parse(Price_txt.Text);
-            int q = int.Parse(Quantity_txt.Text);
-            DateTime d = DateTime.Parse(dt_picker.Text);
-            long id = long.Parse(Id_txt.Text);
+            string n = Name_txt.Text.Trim();
+            string sn = ScientificName_txt.Text.Trim();
+            string m = Manufacturer_txt.Text.Trim();
+            double p = double.Parse(Price_txt.Text.Trim());
+            int q = int.Parse(Quantity_txt.Text.Trim());
+            DateTime d = DateTime.Parse(dt_picker.Text.Trim());
+            long id = long.Parse(Id_txt.Text.Trim());
 
             Medicine med = new Medicine(n, sn, m, p, q, d, id);
 
@@ -52,20 +55,23 @@ namespace Pharmacy_Project
 
         private void update_btn_Click(object sender, EventArgs e)
         {
+
             foreach (Medicine med in DataStorage.Medicines)
             {
                 if (med.Id == selectedId)
                 {
-                    med.Name = Name_txt.Text;
-                    med.ScientificName = ScientificName_txt.Text;
-                    med.Manufacturer = Manufacturer_txt.Text;
-                    med.Price = double.Parse(Price_txt.Text);
-                    med.Quantity = int.Parse(Quantity_txt.Text);
-                    med.ExpiryDate = DateTime.Parse(dt_picker.Text);
+                    med.Name = Name_txt.Text.Trim();
+                    med.ScientificName = ScientificName_txt.Text.Trim();
+                    med.Manufacturer = Manufacturer_txt.Text.Trim();
+                    med.Price = double.Parse(Price_txt.Text.Trim());
+                    med.Quantity = int.Parse(Quantity_txt.Text.Trim());
+                    med.ExpiryDate = DateTime.Parse(dt_picker.Text.Trim());
+                    med.Id = long.Parse(Id_txt.Text.Trim());
                     break;
                 }
             }
 
+            //TimerHelper.ShowTwoMessages(status_lbl, timer, "Procssing...", Color.Blue, "Done", Color.Green, 3, 6);
             Helper.Refresh(gd_management);
         }
 
@@ -183,6 +189,7 @@ namespace Pharmacy_Project
             Price_txt.Clear();
             Quantity_txt.Clear();
             dt_picker.Value = DateTime.Now;
+            Id_txt.Clear();
         }
 
         private void logout_btn_MouseLeave(object sender, EventArgs e)
@@ -203,6 +210,29 @@ namespace Pharmacy_Project
         private void btn_exit_MouseLeave(object sender, EventArgs e)
         {
             btn_exit.FillColor = Color.DodgerBlue;
+        }
+
+
+        // دالة المؤقت
+        private async Task RunStatusSequence()
+        {
+            // 1. تشغيل المرحلة الأولى (Processing)
+            status_lbl.Text = "Processing...";
+            status_lbl.ForeColor = Color.Orange;
+            status_lbl.Visible = true;
+
+            // 2. انتظر لمدة 2 ثانية
+            await Task.Delay(2000);
+
+            // 3. تشغيل المرحلة الثانية (Done)
+            status_lbl.Text = "Done!";
+            status_lbl.ForeColor = Color.Green;
+
+            // 4. انتظر لمدة 2 ثانية أخرى
+            await Task.Delay(2000);
+
+            // 5. إخفاء الـ Label
+            status_lbl.Visible = false;
         }
     }
 }

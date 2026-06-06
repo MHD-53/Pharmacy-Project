@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -38,14 +38,16 @@
             this.btnEX = new Guna.UI2.WinForms.Guna2Button();
             this.btnMG = new Guna.UI2.WinForms.Guna2Button();
             this.btnPOS = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.AddToCart_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Cart_dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Buy_btn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SelectedID_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Qu_NumUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cart_dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Qu_NumUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -158,44 +160,44 @@
             this.btnPOS.TabIndex = 0;
             this.btnPOS.Text = "POS";
             // 
-            // guna2Button1
+            // AddToCart_btn
             // 
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(656, 118);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 30;
-            this.guna2Button1.Text = "Add to Cart";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.AddToCart_btn.BorderRadius = 20;
+            this.AddToCart_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.AddToCart_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.AddToCart_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.AddToCart_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.AddToCart_btn.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddToCart_btn.ForeColor = System.Drawing.Color.White;
+            this.AddToCart_btn.Location = new System.Drawing.Point(725, 115);
+            this.AddToCart_btn.Name = "AddToCart_btn";
+            this.AddToCart_btn.Size = new System.Drawing.Size(180, 45);
+            this.AddToCart_btn.TabIndex = 30;
+            this.AddToCart_btn.Text = "Add to Cart";
+            this.AddToCart_btn.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Cart_dataGridView
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.Cart_dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cart_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.Cart_dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cart_dataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Cart_dataGridView.ColumnHeadersHeight = 4;
             this.Cart_dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cart_dataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Cart_dataGridView.DefaultCellStyle = dataGridViewCellStyle6;
             this.Cart_dataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.Cart_dataGridView.Location = new System.Drawing.Point(222, 199);
             this.Cart_dataGridView.Name = "Cart_dataGridView";
@@ -273,17 +275,30 @@
             this.SelectedID_txt.TabIndex = 35;
             this.SelectedID_txt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SelectedID_txt_KeyPress);
             // 
+            // Qu_NumUpDown
+            // 
+            this.Qu_NumUpDown.BackColor = System.Drawing.Color.Transparent;
+            this.Qu_NumUpDown.BorderRadius = 20;
+            this.Qu_NumUpDown.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Qu_NumUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Qu_NumUpDown.Location = new System.Drawing.Point(591, 115);
+            this.Qu_NumUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Qu_NumUpDown.Name = "Qu_NumUpDown";
+            this.Qu_NumUpDown.Size = new System.Drawing.Size(114, 48);
+            this.Qu_NumUpDown.TabIndex = 36;
+            // 
             // POSForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 637);
+            this.Controls.Add(this.Qu_NumUpDown);
             this.Controls.Add(this.SelectedID_txt);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.Buy_btn);
             this.Controls.Add(this.Cart_dataGridView);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.AddToCart_btn);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.guna2HtmlLabel1);
@@ -294,6 +309,7 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Cart_dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Qu_NumUpDown)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,11 +322,12 @@
         private Guna.UI2.WinForms.Guna2Button btnMG;
         private Guna.UI2.WinForms.Guna2Button btnPOS;
         private Guna.UI2.WinForms.Guna2Button logout_btn;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button AddToCart_btn;
         private Guna.UI2.WinForms.Guna2DataGridView Cart_dataGridView;
         private Guna.UI2.WinForms.Guna2Button Buy_btn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox SelectedID_txt;
+        private Guna.UI2.WinForms.Guna2NumericUpDown Qu_NumUpDown;
     }
 }

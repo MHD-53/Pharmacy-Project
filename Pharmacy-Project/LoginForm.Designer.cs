@@ -38,7 +38,7 @@
             this.txt_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.login_lbl = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
@@ -161,7 +161,7 @@
             this.txt_password.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
-            this.txt_password.PlaceholderText = "";
+            this.txt_password.PlaceholderText = "Ex: 1234";
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(190, 50);
             this.txt_password.TabIndex = 1;
@@ -178,17 +178,17 @@
             this.guna2PictureBox1.TabStop = false;
             this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
             // 
-            // label3
+            // login_lbl
             // 
-            this.label3.BackColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Font = new System.Drawing.Font("Monotype Koufi", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-12, -1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(1209, 84);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Log in";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.login_lbl.BackColor = System.Drawing.Color.DodgerBlue;
+            this.login_lbl.Font = new System.Drawing.Font("Unispace", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_lbl.ForeColor = System.Drawing.Color.White;
+            this.login_lbl.Location = new System.Drawing.Point(-12, -1);
+            this.login_lbl.Name = "login_lbl";
+            this.login_lbl.Size = new System.Drawing.Size(1209, 84);
+            this.login_lbl.TabIndex = 5;
+            this.login_lbl.Text = "Login";
+            this.login_lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2TextBox1
             // 
@@ -196,7 +196,7 @@
             this.guna2TextBox1.BorderRadius = 20;
             this.guna2TextBox1.BorderThickness = 3;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.guna2TextBox1.DefaultText = "Welcome to SMSM pharamcy !";
+            this.guna2TextBox1.DefaultText = "Welcome to M2S pharamcy !";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -244,7 +244,7 @@
             this.ClientSize = new System.Drawing.Size(1177, 637);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.guna2TextBox1);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.login_lbl);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -268,7 +268,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label login_lbl;
         private System.Windows.Forms.Label lbl_wrongUser;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Guna.UI2.WinForms.Guna2Button btn_exit;
