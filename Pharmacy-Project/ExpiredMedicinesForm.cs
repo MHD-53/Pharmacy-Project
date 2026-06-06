@@ -89,5 +89,15 @@ namespace Pharmacy_Project
         {
             logout_btn.FillColor = Color.DimGray;
         }
+
+        private void btn_exit_MouseEnter(object sender, EventArgs e)
+        {
+            btn_exit.FillColor = Color.Red;
+        }
+
+        private void btn_exit_MouseLeave(object sender, EventArgs e)
+        {
+            btn_exit.FillColor = Color.DodgerBlue;
+        }
     }
 }

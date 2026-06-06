@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Exitbtn = new System.Windows.Forms.Button();
             this.gd_management = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Filter_cmb = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -44,11 +44,13 @@
             this.Quantity_txt = new Guna.UI2.WinForms.Guna2TextBox();
             this.dt_picker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
             this.btnEX = new Guna.UI2.WinForms.Guna2Button();
             this.btnMG = new Guna.UI2.WinForms.Guna2Button();
             this.btnPOS = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.Clear_btn = new Guna.UI2.WinForms.Guna2Button();
             this.Ex_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.qu_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.Sname_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,8 +59,8 @@
             this.name_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
-            this.Clear_btn = new Guna.UI2.WinForms.Guna2Button();
-            this.logout_btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Id_txt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.id_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gd_management)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -76,26 +78,26 @@
             // 
             // gd_management
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.gd_management.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gd_management.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gd_management.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gd_management.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gd_management.ColumnHeadersHeight = 4;
             this.gd_management.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gd_management.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gd_management.DefaultCellStyle = dataGridViewCellStyle3;
             this.gd_management.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gd_management.Location = new System.Drawing.Point(517, 142);
             this.gd_management.Name = "gd_management";
@@ -140,7 +142,7 @@
             this.add_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.add_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.add_btn.ForeColor = System.Drawing.Color.White;
-            this.add_btn.Location = new System.Drawing.Point(9, 369);
+            this.add_btn.Location = new System.Drawing.Point(7, 428);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(151, 45);
             this.add_btn.TabIndex = 14;
@@ -156,7 +158,7 @@
             this.update_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.update_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update_btn.ForeColor = System.Drawing.Color.White;
-            this.update_btn.Location = new System.Drawing.Point(8, 448);
+            this.update_btn.Location = new System.Drawing.Point(7, 488);
             this.update_btn.Name = "update_btn";
             this.update_btn.Size = new System.Drawing.Size(152, 45);
             this.update_btn.TabIndex = 15;
@@ -172,7 +174,7 @@
             this.remove_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.remove_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.remove_btn.ForeColor = System.Drawing.Color.White;
-            this.remove_btn.Location = new System.Drawing.Point(166, 369);
+            this.remove_btn.Location = new System.Drawing.Point(169, 428);
             this.remove_btn.Name = "remove_btn";
             this.remove_btn.Size = new System.Drawing.Size(151, 45);
             this.remove_btn.TabIndex = 16;
@@ -319,6 +321,24 @@
             this.guna2Panel1.Size = new System.Drawing.Size(195, 565);
             this.guna2Panel1.TabIndex = 23;
             // 
+            // logout_btn
+            // 
+            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logout_btn.FillColor = System.Drawing.Color.DimGray;
+            this.logout_btn.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logout_btn.ForeColor = System.Drawing.Color.White;
+            this.logout_btn.Location = new System.Drawing.Point(0, 520);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(195, 45);
+            this.logout_btn.TabIndex = 3;
+            this.logout_btn.Text = "Log out";
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
+            this.logout_btn.MouseEnter += new System.EventHandler(this.logout_btn_MouseEnter);
+            this.logout_btn.MouseLeave += new System.EventHandler(this.logout_btn_MouseLeave);
+            // 
             // btnEX
             // 
             this.btnEX.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -381,6 +401,8 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Controls.Add(this.id_lbl);
+            this.guna2Panel2.Controls.Add(this.Id_txt);
             this.guna2Panel2.Controls.Add(this.Clear_btn);
             this.guna2Panel2.Controls.Add(this.Ex_lbl);
             this.guna2Panel2.Controls.Add(this.qu_lbl);
@@ -401,6 +423,25 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(320, 555);
             this.guna2Panel2.TabIndex = 25;
+            // 
+            // Clear_btn
+            // 
+            this.Clear_btn.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.Clear_btn.BorderRadius = 20;
+            this.Clear_btn.BorderThickness = 1;
+            this.Clear_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Clear_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Clear_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Clear_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Clear_btn.FillColor = System.Drawing.Color.White;
+            this.Clear_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear_btn.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Clear_btn.Location = new System.Drawing.Point(165, 488);
+            this.Clear_btn.Name = "Clear_btn";
+            this.Clear_btn.Size = new System.Drawing.Size(152, 45);
+            this.Clear_btn.TabIndex = 29;
+            this.Clear_btn.Text = "Clear";
+            this.Clear_btn.Click += new System.EventHandler(this.Clear_btn_Click);
             // 
             // Ex_lbl
             // 
@@ -501,43 +542,42 @@
             this.btn_exit.TabIndex = 27;
             this.btn_exit.Text = "X";
             this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            this.btn_exit.MouseEnter += new System.EventHandler(this.btn_exit_MouseEnter);
+            this.btn_exit.MouseLeave += new System.EventHandler(this.btn_exit_MouseLeave);
             // 
-            // Clear_btn
+            // Id_txt
             // 
-            this.Clear_btn.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.Clear_btn.BorderRadius = 20;
-            this.Clear_btn.BorderThickness = 1;
-            this.Clear_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Clear_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Clear_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Clear_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Clear_btn.FillColor = System.Drawing.Color.White;
-            this.Clear_btn.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clear_btn.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Clear_btn.Location = new System.Drawing.Point(165, 448);
-            this.Clear_btn.Name = "Clear_btn";
-            this.Clear_btn.Size = new System.Drawing.Size(152, 45);
-            this.Clear_btn.TabIndex = 29;
-            this.Clear_btn.Text = "Clear";
-            this.Clear_btn.Click += new System.EventHandler(this.Clear_btn_Click);
+            this.Id_txt.BorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.Id_txt.BorderRadius = 20;
+            this.Id_txt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.Id_txt.DefaultText = "";
+            this.Id_txt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.Id_txt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.Id_txt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Id_txt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.Id_txt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Id_txt.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_txt.ForeColor = System.Drawing.Color.Black;
+            this.Id_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.Id_txt.Location = new System.Drawing.Point(120, 364);
+            this.Id_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Id_txt.Name = "Id_txt";
+            this.Id_txt.PlaceholderText = "";
+            this.Id_txt.SelectedText = "";
+            this.Id_txt.Size = new System.Drawing.Size(180, 48);
+            this.Id_txt.TabIndex = 30;
             // 
-            // logout_btn
+            // id_lbl
             // 
-            this.logout_btn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logout_btn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logout_btn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logout_btn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logout_btn.FillColor = System.Drawing.Color.DimGray;
-            this.logout_btn.Font = new System.Drawing.Font("Segoe UI", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logout_btn.ForeColor = System.Drawing.Color.White;
-            this.logout_btn.Location = new System.Drawing.Point(0, 520);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(195, 45);
-            this.logout_btn.TabIndex = 3;
-            this.logout_btn.Text = "Log out";
-            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
-            this.logout_btn.MouseEnter += new System.EventHandler(this.logout_btn_MouseEnter);
-            this.logout_btn.MouseLeave += new System.EventHandler(this.logout_btn_MouseLeave);
+            this.id_lbl.AutoSize = false;
+            this.id_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.id_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_lbl.Location = new System.Drawing.Point(17, 364);
+            this.id_lbl.Name = "id_lbl";
+            this.id_lbl.Size = new System.Drawing.Size(92, 41);
+            this.id_lbl.TabIndex = 31;
+            this.id_lbl.Text = "ID:";
+            this.id_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Management
             // 
@@ -594,5 +634,7 @@
         private Guna.UI2.WinForms.Guna2Button btn_exit;
         private Guna.UI2.WinForms.Guna2Button Clear_btn;
         private Guna.UI2.WinForms.Guna2Button logout_btn;
+        private Guna.UI2.WinForms.Guna2HtmlLabel id_lbl;
+        private Guna.UI2.WinForms.Guna2TextBox Id_txt;
     }
 }

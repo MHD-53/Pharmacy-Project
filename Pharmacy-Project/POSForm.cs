@@ -63,7 +63,7 @@ namespace Pharmacy_Project
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Buy_btn_Click(object sender, EventArgs e)
         {
        
             // التحقق أن السلة مو فارغة
@@ -233,6 +233,16 @@ namespace Pharmacy_Project
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_exit_MouseEnter(object sender, EventArgs e)
+        {
+            btn_exit.FillColor = Color.Red;
+        }
+
+        private void btn_exit_MouseLeave(object sender, EventArgs e)
+        {
+            btn_exit.FillColor = Color.DodgerBlue;
         }
     }
     

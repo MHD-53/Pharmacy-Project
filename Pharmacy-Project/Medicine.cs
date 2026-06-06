@@ -15,9 +15,9 @@ namespace Pharmacy_Project
         public double Price { get; set; }
         public int Quantity { get; set; }
         public DateTime ExpiryDate { get; set; }
-        public int Id { get; set; }
+        public long Id { get; set; }
 
-        public Medicine(string name, string scientificName, string manufacturer, double price, int quantity, DateTime expiryDate, int id)
+        public Medicine(string name, string scientificName, string manufacturer, double price, int quantity, DateTime expiryDate, long id)
         {
             Name = name;
             ScientificName = scientificName;

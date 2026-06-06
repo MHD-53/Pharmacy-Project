@@ -12,7 +12,7 @@ namespace Pharmacy_Project
 {
     public partial class Management : Form
     {
-        int Idindex = 10;
+        
         int selectedId = -1;
         public Management()
         {
@@ -27,17 +27,24 @@ namespace Pharmacy_Project
 
         private void add_btn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(Name_txt.Text) || string.IsNullOrWhiteSpace(ScientificName_txt.Text) || string.IsNullOrWhiteSpace(Manufacturer_txt.Text) || string.IsNullOrWhiteSpace(Price_txt.Text) || string.IsNullOrWhiteSpace(Quantity_txt.Text))
+            {
+                MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string n = Name_txt.Text;
             string sn = ScientificName_txt.Text;
             string m = Manufacturer_txt.Text;
             double p = double.Parse(Price_txt.Text);
             int q = int.Parse(Quantity_txt.Text);
             DateTime d = DateTime.Parse(dt_picker.Text);
+            long id = long.Parse(Id_txt.Text);
 
-            Medicine med = new Medicine(n, sn, m, p, q, d, Idindex);
+            Medicine med = new Medicine(n, sn, m, p, q, d, id);
 
             DataStorage.Medicines.Add(med);
-            Idindex++;
+            
 
             Helper.Refresh(gd_management);
 
@@ -65,6 +72,8 @@ namespace Pharmacy_Project
         private void gd_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedId = int.Parse(gd_management.CurrentRow.Cells["Id"].Value.ToString());
+            Id_txt.Text = gd_management.CurrentRow.Cells["Id"].Value.ToString();
+
             Name_txt.Text = gd_management.CurrentRow.Cells["Name"].Value.ToString();
             ScientificName_txt.Text = gd_management.CurrentRow.Cells["ScientificName"].Value.ToString();
             Manufacturer_txt.Text = gd_management.CurrentRow.Cells["Manufacturer"].Value.ToString();
@@ -184,6 +193,16 @@ namespace Pharmacy_Project
         private void logout_btn_MouseEnter(object sender, EventArgs e)
         {
             logout_btn.FillColor = Color.Red;
+        }
+
+        private void btn_exit_MouseEnter(object sender, EventArgs e)
+        {
+            btn_exit.FillColor = Color.Red;
+        }
+
+        private void btn_exit_MouseLeave(object sender, EventArgs e)
+        {
+            btn_exit.FillColor = Color.DodgerBlue;
         }
     }
 }

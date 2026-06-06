@@ -141,7 +141,7 @@
             this.txt_username.PlaceholderText = "Example";
             this.txt_username.SelectedText = "";
             this.txt_username.Size = new System.Drawing.Size(190, 46);
-            this.txt_username.TabIndex = 1;
+            this.txt_username.TabIndex = 0;
             // 
             // txt_password
             // 
@@ -164,7 +164,7 @@
             this.txt_password.PlaceholderText = "";
             this.txt_password.SelectedText = "";
             this.txt_password.Size = new System.Drawing.Size(190, 50);
-            this.txt_password.TabIndex = 0;
+            this.txt_password.TabIndex = 1;
             // 
             // guna2PictureBox1
             // 
@@ -237,6 +237,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.btn_login;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
