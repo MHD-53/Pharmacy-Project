@@ -42,7 +42,6 @@
             this.Cart_dataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Buy_btn = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SelectedID_txt = new Guna.UI2.WinForms.Guna2TextBox();
             this.Qu_NumUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2Panel1.SuspendLayout();
@@ -241,18 +240,6 @@
             this.guna2HtmlLabel2.TabIndex = 33;
             this.guna2HtmlLabel2.Text = "Enter the ID here:";
             // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Azure;
-            this.guna2HtmlLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Tahoma", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(222, 567);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(65, 42);
-            this.guna2HtmlLabel3.TabIndex = 34;
-            this.guna2HtmlLabel3.Text = "Cart";
-            // 
             // SelectedID_txt
             // 
             this.SelectedID_txt.BorderRadius = 16;
@@ -294,7 +281,6 @@
             this.ClientSize = new System.Drawing.Size(1177, 637);
             this.Controls.Add(this.Qu_NumUpDown);
             this.Controls.Add(this.SelectedID_txt);
-            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.Buy_btn);
             this.Controls.Add(this.Cart_dataGridView);
@@ -326,7 +312,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView Cart_dataGridView;
         private Guna.UI2.WinForms.Guna2Button Buy_btn;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox SelectedID_txt;
         private Guna.UI2.WinForms.Guna2NumericUpDown Qu_NumUpDown;
     }

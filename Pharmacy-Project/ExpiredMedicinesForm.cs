@@ -15,6 +15,11 @@ namespace Pharmacy_Project
         public ExpiredMedicinesForm()
         {
             InitializeComponent();
+
+            ex_gd.DefaultCellStyle.Font = new Font("Arial", 12);
+            ex_gd.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12);
+            ex_gd.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            ex_gd.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void ExpiredMedicinesForm_Load(object sender, EventArgs e)

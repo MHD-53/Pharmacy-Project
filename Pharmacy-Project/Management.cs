@@ -28,7 +28,7 @@ namespace Pharmacy_Project
             gd_management.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
-        private void add_btn_Click(object sender, EventArgs e)
+        private async void add_btn_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Name_txt.Text) || string.IsNullOrWhiteSpace(ScientificName_txt.Text) || string.IsNullOrWhiteSpace(Manufacturer_txt.Text) || string.IsNullOrWhiteSpace(Price_txt.Text) || string.IsNullOrWhiteSpace(Quantity_txt.Text))
             {
@@ -46,16 +46,35 @@ namespace Pharmacy_Project
 
             Medicine med = new Medicine(n, sn, m, p, q, d, id);
 
-            DataStorage.Medicines.Add(med);
-            
 
+            foreach (Medicine temp in DataStorage.Medicines) // التحقق انه مو موجود مسبقا
+            {
+                if (med.Id == temp.Id)
+                {
+                    MessageBox.Show("A medicine with the same ID already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            foreach (Medicine temp in DataStorage.Medicines)
+            {
+                if (med.Name ==  temp.Name)
+                    {
+                    MessageBox.Show("A medicine with the same Name already exists.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+
+            DataStorage.Medicines.Add(med);
+
+            await RunStatusSequence();
             Helper.Refresh(gd_management);
 
         }
 
-        private void update_btn_Click(object sender, EventArgs e)
+        private async void update_btn_Click(object sender, EventArgs e)
         {
-
+           
             foreach (Medicine med in DataStorage.Medicines)
             {
                 if (med.Id == selectedId)
@@ -72,6 +91,7 @@ namespace Pharmacy_Project
             }
 
             //TimerHelper.ShowTwoMessages(status_lbl, timer, "Procssing...", Color.Blue, "Done", Color.Green, 3, 6);
+            await RunStatusSequence();
             Helper.Refresh(gd_management);
         }
 
@@ -88,7 +108,7 @@ namespace Pharmacy_Project
             dt_picker.Value = DateTime.Parse(gd_management.CurrentRow.Cells["ExpiryDate"].Value.ToString());
         }
 
-        private void remove_btn_Click(object sender, EventArgs e)
+        private async void remove_btn_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to delete this medicine?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.No)
@@ -96,6 +116,7 @@ namespace Pharmacy_Project
                 return;
             }
 
+            await RunStatusSequence();
             Medicine medToDelet = null;
             foreach (Medicine med in DataStorage.Medicines)
             {

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Exitbtn = new System.Windows.Forms.Button();
             this.gd_management = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Filter_cmb = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -62,8 +62,8 @@
             this.name_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btn_exit = new Guna.UI2.WinForms.Guna2Button();
-            this.status_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.status_lbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gd_management)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -81,26 +81,26 @@
             // 
             // gd_management
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.gd_management.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gd_management.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.gd_management.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gd_management.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gd_management.ColumnHeadersHeight = 4;
             this.gd_management.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 8F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gd_management.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 8F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gd_management.DefaultCellStyle = dataGridViewCellStyle3;
             this.gd_management.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gd_management.Location = new System.Drawing.Point(517, 142);
             this.gd_management.Name = "gd_management";
@@ -520,12 +520,12 @@
             // 
             this.man_lbl.AutoSize = false;
             this.man_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.man_lbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.man_lbl.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.man_lbl.Location = new System.Drawing.Point(0, 137);
             this.man_lbl.Name = "man_lbl";
             this.man_lbl.Size = new System.Drawing.Size(120, 41);
             this.man_lbl.TabIndex = 25;
-            this.man_lbl.Text = "Manufacture";
+            this.man_lbl.Text = "Manufacture:";
             this.man_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pri_lbl
@@ -587,11 +587,13 @@
             // 
             this.status_lbl.AutoSize = false;
             this.status_lbl.BackColor = System.Drawing.Color.Transparent;
-            this.status_lbl.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.status_lbl.Location = new System.Drawing.Point(920, 90);
+            this.status_lbl.Font = new System.Drawing.Font("Unispace", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status_lbl.Location = new System.Drawing.Point(808, 81);
             this.status_lbl.Name = "status_lbl";
-            this.status_lbl.Size = new System.Drawing.Size(136, 27);
-            this.status_lbl.TabIndex = 28;
+            this.status_lbl.Size = new System.Drawing.Size(214, 53);
+            this.status_lbl.TabIndex = 30;
+            this.status_lbl.Text = null;
+            this.status_lbl.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.status_lbl.Visible = false;
             // 
             // Management
@@ -651,7 +653,7 @@
         private Guna.UI2.WinForms.Guna2Button logout_btn;
         private Guna.UI2.WinForms.Guna2HtmlLabel id_lbl;
         private Guna.UI2.WinForms.Guna2TextBox Id_txt;
-        private Guna.UI2.WinForms.Guna2HtmlLabel status_lbl;
         private System.Windows.Forms.Timer timer;
+        private Guna.UI2.WinForms.Guna2HtmlLabel status_lbl;
     }
 }
