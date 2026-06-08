@@ -14,10 +14,11 @@ namespace Pharmacy_Project
 
         public static void StatringData() // ميثود البيانات الابتدائية للأدوية
         {
-           Medicines.Add(new Medicine("Panadol","paracetamol","TST", 10.0, 100, new DateTime(2026,12,10), 1));
-           Medicines.Add(new Medicine("Sinadol", "par4", "gg", 5.0, 600, new DateTime(2024, 10, 3), 2));
-           Medicines.Add(new Medicine("OOanadol", "par", "aa", 8.0, 600, new DateTime(2023, 11, 4), 3));
-            
+           Medicines.Add(new Medicine("Zerospasm","Alverine","Avevzor", 12000, 100, new DateTime(2025,1,1), 6214436071846));
+           Medicines.Add(new Medicine("Revan", "Iprofen", "ProlinePharma", 4000, 65, new DateTime(2024, 10, 3), 6217290014417));
+           Medicines.Add(new Medicine("Uraline", "Antispasmodic", "BahriPharma", 53500, 43, new DateTime(2026, 11, 4), 6211060020103));
+           Medicines.Add(new Medicine("Flam-k", "DiclofenacPotassium", "DiamondPharma", 53500, 43, new DateTime(2028, 10, 4), 6210870075358));
+           Medicines.Add(new Medicine("Retinoid", "Cream", "DiminaPharma", 17000, 13, new DateTime(2029, 7, 31), 6214327086423));
         }
     }
 }

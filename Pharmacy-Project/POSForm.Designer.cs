@@ -44,6 +44,7 @@
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.SelectedID_txt = new Guna.UI2.WinForms.Guna2TextBox();
             this.Qu_NumUpDown = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.lbl_wrongId = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Cart_dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Qu_NumUpDown)).BeginInit();
@@ -64,7 +65,7 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.BackColor = System.Drawing.Color.Red;
+            this.btn_exit.BackColor = System.Drawing.Color.Transparent;
             this.btn_exit.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.btn_exit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_exit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -173,7 +174,7 @@
             this.AddToCart_btn.Size = new System.Drawing.Size(180, 45);
             this.AddToCart_btn.TabIndex = 30;
             this.AddToCart_btn.Text = "Add to Cart";
-            this.AddToCart_btn.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.AddToCart_btn.Click += new System.EventHandler(this.AddToCart_btn_Click);
             // 
             // Cart_dataGridView
             // 
@@ -255,6 +256,7 @@
             this.SelectedID_txt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.SelectedID_txt.Location = new System.Drawing.Point(431, 115);
             this.SelectedID_txt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SelectedID_txt.MaxLength = 30000000;
             this.SelectedID_txt.Name = "SelectedID_txt";
             this.SelectedID_txt.PlaceholderText = "";
             this.SelectedID_txt.SelectedText = "";
@@ -270,15 +272,38 @@
             this.Qu_NumUpDown.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Qu_NumUpDown.Location = new System.Drawing.Point(591, 115);
             this.Qu_NumUpDown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Qu_NumUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.Qu_NumUpDown.Name = "Qu_NumUpDown";
             this.Qu_NumUpDown.Size = new System.Drawing.Size(114, 48);
             this.Qu_NumUpDown.TabIndex = 36;
+            this.Qu_NumUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lbl_wrongId
+            // 
+            this.lbl_wrongId.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_wrongId.ForeColor = System.Drawing.Color.Red;
+            this.lbl_wrongId.Location = new System.Drawing.Point(410, 167);
+            this.lbl_wrongId.Name = "lbl_wrongId";
+            this.lbl_wrongId.Size = new System.Drawing.Size(207, 29);
+            this.lbl_wrongId.TabIndex = 37;
+            this.lbl_wrongId.Text = "Medicine Not Found.";
+            this.lbl_wrongId.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_wrongId.Visible = false;
             // 
             // POSForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 637);
+            this.Controls.Add(this.lbl_wrongId);
             this.Controls.Add(this.Qu_NumUpDown);
             this.Controls.Add(this.SelectedID_txt);
             this.Controls.Add(this.guna2HtmlLabel2);
@@ -314,5 +339,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox SelectedID_txt;
         private Guna.UI2.WinForms.Guna2NumericUpDown Qu_NumUpDown;
+        private System.Windows.Forms.Label lbl_wrongId;
     }
 }

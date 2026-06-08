@@ -73,7 +73,7 @@
             this.lbl_wrongUser.Name = "lbl_wrongUser";
             this.lbl_wrongUser.Size = new System.Drawing.Size(346, 27);
             this.lbl_wrongUser.TabIndex = 6;
-            this.lbl_wrongUser.Text = "Username or password are incorrect.";
+            this.lbl_wrongUser.Text = "Username or password is incorrect.";
             this.lbl_wrongUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_wrongUser.Visible = false;
             // 

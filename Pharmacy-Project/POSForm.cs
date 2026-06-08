@@ -93,14 +93,12 @@ namespace Pharmacy_Project
                     {
                         if (qu > DataStorage.Medicines[j].Quantity)
                         {
-                            MessageBox.Show($"الكمية المتوفرة من {medName} هي فقط: {DataStorage.Medicines[j].Quantity}",
-                                "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show($"The available Quantity of {medName} is: {DataStorage.Medicines[j].Quantity}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
                         if (qu <= 0)
                         {
-                            MessageBox.Show($"الرجاء إدخال كمية صحيحة للدواء: {medName}",
-                                "تنبيه", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show($"Please enter a valid quantity of {medName}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
                         break;
@@ -137,16 +135,9 @@ namespace Pharmacy_Project
 
             DataStorage.Invoices.Add(invoice);
 
-            InvoiceForm inv = new InvoiceForm(invoice);
-            inv.ShowDialog();   
-
-            MessageBox.Show($"تمت عملية الشراء بنجاح!\nالإجمالي: {invoice.Total} ",
-                "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             // تصفير السلة
             Cart_dataGridView.Rows.Clear();
 
-           
         }
 
       
@@ -179,7 +170,7 @@ namespace Pharmacy_Project
             login.Show();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void AddToCart_btn_Click(object sender, EventArgs e)
         {
             
             if (SelectedID_txt.Text == "")
@@ -189,9 +180,22 @@ namespace Pharmacy_Project
                 return;
             }
 
-            int SelectedID = int.Parse(SelectedID_txt.Text.Trim());
+            long SelectedID = long.Parse(SelectedID_txt.Text.Trim());
             int Qu = (int)Qu_NumUpDown.Value;
+            bool found= false;
 
+            foreach (Medicine temp in DataStorage.Medicines)
+            {
+                if (temp.Id == SelectedID)
+                {
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) { lbl_wrongId.Visible = true; return; }
+
+            lbl_wrongId.Visible = false;
             // نبحث عن الدواء في القائمة
             Medicine SelectedMed = null;
             for (int i = 0; i < DataStorage.Medicines.Count; i++)
@@ -200,6 +204,16 @@ namespace Pharmacy_Project
                 {
                     SelectedMed = DataStorage.Medicines[i];
                     break;
+                }
+            }
+
+            // التحقق من انتهاء الصلاحية
+            for (int i = 0; i < DataStorage.Medicines.Count; i++)
+            {
+                if (SelectedMed.ExpiryDate < DateTime.Now)
+                {
+                    MessageBox.Show("Sorry, This medicine is expired", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                   return;
                 }
             }
 

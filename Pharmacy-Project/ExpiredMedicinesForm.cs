@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Pharmacy_Project
 {
     public partial class ExpiredMedicinesForm : Form
@@ -48,11 +49,11 @@ namespace Pharmacy_Project
                     DataStorage.Medicines.RemoveAt(i);
                 }
             }
-            MessageBox.Show("Expired medicines have been removed.");
+            MessageBox.Show("Expired medicines have been removed.", "sucess", MessageBoxButtons.OK,MessageBoxIcon.Information);
             
-            POSForm pos = new POSForm();
-            pos.Show();
-            this.Hide();
+            Management manage = new Management();
+            manage.Show();
+            this.Close();
         }
 
         

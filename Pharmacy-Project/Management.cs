@@ -13,11 +13,12 @@ namespace Pharmacy_Project
     public partial class Management : Form
     {
         
-        int selectedId = -1;
+        long selectedId = -1;
         public Management()
         {
             InitializeComponent();
             Filter_cmb.SelectedIndex = 0;
+            gd_management.Columns["Quantity"].Width = 52;
         }
 
         private void Management_Load(object sender, EventArgs e)
@@ -43,6 +44,11 @@ namespace Pharmacy_Project
             int q = int.Parse(Quantity_txt.Text.Trim());
             DateTime d = DateTime.Parse(dt_picker.Text.Trim());
             long id = long.Parse(Id_txt.Text.Trim());
+
+            if(q <= 0) { 
+                MessageBox.Show("Invalid Quantity", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             Medicine med = new Medicine(n, sn, m, p, q, d, id);
 
@@ -90,14 +96,13 @@ namespace Pharmacy_Project
                 }
             }
 
-            //TimerHelper.ShowTwoMessages(status_lbl, timer, "Procssing...", Color.Blue, "Done", Color.Green, 3, 6);
             await RunStatusSequence();
             Helper.Refresh(gd_management);
         }
 
         private void gd_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            selectedId = int.Parse(gd_management.CurrentRow.Cells["Id"].Value.ToString());
+            selectedId = long.Parse(gd_management.CurrentRow.Cells["Id"].Value.ToString());
             Id_txt.Text = gd_management.CurrentRow.Cells["Id"].Value.ToString();
 
             Name_txt.Text = gd_management.CurrentRow.Cells["Name"].Value.ToString();
@@ -237,22 +242,22 @@ namespace Pharmacy_Project
         // دالة المؤقت
         private async Task RunStatusSequence()
         {
-            // 1. تشغيل المرحلة الأولى (Processing)
+            // تشغيل المرحلة الأولى
             status_lbl.Text = "Processing...";
             status_lbl.ForeColor = Color.Orange;
             status_lbl.Visible = true;
 
-            // 2. انتظر لمدة 2 ثانية
+            // انتظر لمدة 2 ثانية
             await Task.Delay(2000);
 
-            // 3. تشغيل المرحلة الثانية (Done)
+            // تشغيل المرحلة الثانية
             status_lbl.Text = "Done!";
             status_lbl.ForeColor = Color.Green;
 
-            // 4. انتظر لمدة 2 ثانية أخرى
+            // انتظر لمدة 2 ثانية أخرى
             await Task.Delay(2000);
 
-            // 5. إخفاء الـ Label
+            //  إخفاء الـ Label
             status_lbl.Visible = false;
         }
     }
