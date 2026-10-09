@@ -27,7 +27,6 @@ namespace Pharmacy_Project
         {
             if (Login.CheckUser(txt_username.Text, txt_password.Text))
             {
-                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Management manage = new Management();
                 this.Hide();
                 manage.Show();
