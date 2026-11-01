@@ -1,5 +1,5 @@
 # Pharmacy-Project
-M2S Pharma 💊
+<img src="Images/M2S_LOGO.png" alt="M2S Logo" height="120" width="300">
 
 M2S Pharma is a simple pharmacy management system built using C# and Windows Forms.
 This project is designed for training purposes and demonstrates core programming concepts such as CRUD operations, UI design, and basic business logic.
